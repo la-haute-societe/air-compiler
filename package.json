@@ -1,0 +1,26 @@
+{
+	"name": "air-compiler",
+	"description": "A compiling helper for Adobe Air mobile applications.",
+	"author": "Alexis Bouhet <alexis@lahautesociete.com>",
+	"url": "http://www.zouloux.com/",
+	"version": "0.9.1",
+	"dependencies": {
+		"underscore": "*",
+		"inquirer": "*",
+		"cli-color": "*"
+	},
+	"main": "./lib/air-compiler",
+	"keywords": [
+		"air",
+		"compiler",
+		"adobe",
+		"mobile",
+		"helper"
+	],
+	"bin": {
+		"air-compiler": "./bin/air-compiler"
+	},
+	"engines": {
+		"node": "*"
+	}
+}

@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+"use strict";
+
+// Include stuff
+var path = require('path');
+var fs = require('fs');
+
+// Get module bootstrap path
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+
+// Get arguments
+var args = process.argv.concat();
+args.shift();
+
+// Load the air compiler module
+var airCompiler = require(lib + '/air-compiler.js');
+
+// We are running in process mode (the module can control the process execution)
+airCompiler.processMode = true;
+
+// Call the module with arguments
+airCompiler.run.apply(null, args);

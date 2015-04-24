@@ -6,17 +6,24 @@ var path = require('path');
 var fs = require('fs');
 
 // Get module bootstrap path
-var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib/');
 
 // Get arguments
 var args = process.argv.concat();
 args.shift();
+args.shift();
+
+// Add current working directory
+args.unshift(process.cwd() + "/");
 
 // Load the air compiler module
-var airCompiler = require(lib + '/air-compiler.js');
+var airCompiler = require(lib + 'air-compiler.js');
 
 // We are running in process mode (the module can control the process execution)
 airCompiler.processMode = true;
+
+// Transfert lib path to the module
+airCompiler.libPath = lib;
 
 // Call the module with arguments
 airCompiler.run.apply(null, args);

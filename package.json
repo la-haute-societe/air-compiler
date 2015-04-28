@@ -3,7 +3,7 @@
 	"description": "A compiling helper for Adobe Air mobile applications.",
 	"author": "Alexis Bouhet <alexis@lahautesociete.com>",
 	"url": "http://www.zouloux.com/",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"dependencies": {
 		"underscore": "*",
 		"inquirer": "*",
